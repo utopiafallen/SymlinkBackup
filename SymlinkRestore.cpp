@@ -88,10 +88,18 @@ int main()
 	free(fileBuf);
 
 	for (const Symlink_s& symlink : fileSymlinks)
+	{
+		printf("Restoring %ls ==> %ls\n", symlink.source.c_str(), symlink.target.c_str());
 		CreateSymbolicLinkW(symlink.source.c_str(), symlink.target.c_str(), 0);
+	}
+		
 
 	for (const Symlink_s& symlink : dirSymlinks)
+	{
+		printf("Restoring %ls ==> %ls\n", symlink.source.c_str(), symlink.target.c_str());
 		CreateSymbolicLinkW(symlink.source.c_str(), symlink.target.c_str(), SYMBOLIC_LINK_FLAG_DIRECTORY);
-
+	}
+		
+	system("pause");
 	return 0;
 }
