@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SymlinkBackup.cpp">
+    <ClCompile Include="SymlinkRestore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
